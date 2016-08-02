@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Production Depoly Form Filler",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png"
+  },
+
+  "permissions": [
+   "activeTab"
+   ],
+
+   "content_scripts": [{
+      "css": [ "css/styles.css" ],
+      "matches": ["https://*.kent.edu/*"], "all_frames": true
+   }, {
+      "js": [ "libs/jquery-2.2.1.min.js", "js/formManipulator.js" ],
+      "matches": ["https://*.kent.edu/*"], "all_frames": true
+   }]
+   
+ }
